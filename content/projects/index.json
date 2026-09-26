@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "citadel",
+    "title": "Citadel Hub",
+    "summary": "A way for me to manage my digital estate, with API integration for external services. Hosted locally, and served via a dashboard.",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "SQLite"
+    ],
+    "status": "published",
+    "started": "2026-03",
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "music-companion",
+    "title": "Music Companion",
+    "summary": "A fully interactive archive of my history with music. Linking together my physical record collection, digital listening, and gig history.",
+    "tags": [
+      "Python",
+      "SQLite",
+      "FastAPI",
+      "MusicBrainz",
+      "Discogs",
+      "Spotify",
+      "LastFM"
+    ],
+    "status": "draft",
+    "started": "2026-06",
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "home-casino",
+    "title": "Home Casino",
+    "summary": "A casino game written entirely in Python with no external assets. With a progression system, unlocks, themes, and detailed statistics.",
+    "tags": [
+      "Python",
+      "Tkinter"
+    ],
+    "status": "draft",
+    "started": "2025-11",
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "star-epr",
+    "title": "Star EPR",
+    "summary": "An electronic patient record prototype exploring clean request and results workflows.",
+    "tags": [
+      "Python",
+      "Flask",
+      "HL7",
+      "SQL"
+    ],
+    "status": "draft",
+    "started": "2025-06",
+    "updated": "2026-09-26"
+  }
+]
