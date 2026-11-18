@@ -1,0 +1,129 @@
+{
+  "slug": "citadel",
+  "title": "Citadel",
+  "summary": "Bespoke homelab software. Monitors and controls all devices on my home network, and serves a dashboard for life admin, news, music, a media server, and personal projects. Integrated with several external APIs and local services, accessible on my home network or remotely via Tailscale.",
+  "tags": [
+    "Self-Hosted",
+    "Homelab",
+    "Dashboard",
+    "FastAPI",
+    "Tailscale"
+  ],
+  "repo": "private",
+  "live": "demo/citadel/",
+  "live_label": "demo",
+  "live_max": true,
+  "status": "published",
+  "started": "2026-08",
+  "updated": "2026-11-18",
+  "featured": true,
+  "body": "## Try the demo\nA frozen, read-only snapshot of the real dashboard. Nothing in it is live or saved. The private parts (bookmarks, calendar entries, device information) are redacted or use dummy data, and the pages that only run on my home network are switched off.\n\n::launch\n\n::figure[screenshot-20261117-home]\n\n## Why I built it\nI've made numerous attempts at a local dashboard (/intranet) over the years, but they've all been pretty terrible and I'd given up on them. LLMs have (ethics aside) removed a lot of the barriers to custom software, and this is a prime example of that.\n\nThe GitHub repo is currently private. While my secrets and API keys are .gitignored, I'm still hesitant to make it public in case I've missed something which could be a security concern.\n\n## How it works\nHosted locally on a linux server, it's open to any device on my network. It includes IP whitelisting and MAC address filtering so settings and sensitive information are only available from dedicated devices, while guest devices can have access to the media server. \n\nEach tile can be expanded to show a detailed view. Upcoming vinyl pre-orders show price comparisons, local services show activity logs, etc. \n\nThe music radar is tailored to me, fully integrated with my Music Companion project to only show information about artists I care about. \n\n## What it contains\nDashboard:\n- Google calendar integration (Google API)\n- Upcoming music releases (MusicBrainz API)\n- Upcoming vinyl preorders (Web scraping)\n- Gig radar of upcoming concerts (Ticketmaster API)\n- System monitoring for temperatures and disk space\n- A launchpad for local applications \n- Services monitoring and logging\n- Remote access to the other machines on my network (VNC)\n\nMedia server:\n- Hosted on a dedicated JellyFin install\n- Digitised TV and Film library\n- Extensive live concert archive\n\nMusic Companion:\n- Fully integrated Music Companion\n- See the project page for full details\n\nCasino World:\n- Hosted as its own page\n- See the project page for full details\n\nFleet:\n- Load and temperature history for every machine on my network\n- Heatmap, grid and overlay views\n- A live monitoring pop-out for my main desktop\n\nSettings:\n- Device enrolment and activity logs\n- Nightly backups to a second server, with a weekly off-site copy\n- Easy adding of new stores, news feeds, and local applications.\n\nLook and feel:\n- Day and Night palettes\n- An LCARS theme, with its own motion\n- Per-device navigation and page order\n\nAndroid app:\n- Opens Citadel full screen, at home or away over Tailscale\n\n## Vinyl\n::figure[screenshot-20261117-vinyl]\n\n## Settings\nI won't detail everything in here (there's a lot) but every aspect of the front page is customisable and maintainable through the settings page. Highlights include the below. \n\n::figure[screenshot-20261117-settings]\n\n::figure[screenshot-20261117-log]\n\n::figure[screenshot-20261117-devices]\n",
+  "figures": {
+    "screenshot-20261117-home": {
+      "src": "content/img/citadel/screenshot-20261117-home.png",
+      "w": 2560,
+      "h": 1440,
+      "title": "Citadel Home Screen",
+      "caption": "Each tile can be clicked on to show a full screen variant with additional information, pinning, filtering, etc. ",
+      "alt": "",
+      "hotspots": [
+        {
+          "x": 40.0,
+          "y": 3.1,
+          "note": "Bookmarks drop-down, with my pinned bookmarks beside it (redacted here)."
+        },
+        {
+          "x": 65.7,
+          "y": 3.1,
+          "note": "Temperature and resource monitoring for my primary desktop. Clicking the readout opens the full Monitoring panel."
+        },
+        {
+          "x": 17.7,
+          "y": 11.7,
+          "note": "Daily overview with an API link to my local council's website."
+        },
+        {
+          "x": 41.2,
+          "y": 11.7,
+          "note": "My next live concert, hooked into ticketmaster"
+        },
+        {
+          "x": 64.6,
+          "y": 11.7,
+          "note": "Google calendar integration (the entries are redacted here)"
+        },
+        {
+          "x": 88.0,
+          "y": 11.7,
+          "note": "Remote access to the other machines on my network, opened inside the dashboard."
+        },
+        {
+          "x": 21.6,
+          "y": 45.0,
+          "note": "Upcoming album releases based on my top 200 artists, information gathered from MusicBrainz and updated nightly."
+        },
+        {
+          "x": 52.9,
+          "y": 45.0,
+          "note": "Dual purpose showing both upcoming vinyl releases (updated nightly) and tracking purchases with release countdowns."
+        },
+        {
+          "x": 84.1,
+          "y": 45.0,
+          "note": "Ticketmaster integration for upcoming shows, clicking an event takes you directly to the ticket purchase page. "
+        },
+        {
+          "x": 21.6,
+          "y": 74.1,
+          "note": "Management of all scripts running locally, monitoring uptime and quick start/stop. Expanding this panel shows logs"
+        },
+        {
+          "x": 52.9,
+          "y": 74.1,
+          "note": "Quickly launch applications and settings"
+        },
+        {
+          "x": 84.1,
+          "y": 74.1,
+          "note": "Local/Network storage warnings. A notification will be shown when a disk reaches 10% capacity remaining."
+        }
+      ]
+    },
+    "screenshot-20261117-settings": {
+      "src": "content/img/citadel/screenshot-20261117-settings.png",
+      "w": 1860,
+      "h": 1080,
+      "title": "Settings page",
+      "caption": "",
+      "alt": "",
+      "hotspots": []
+    },
+    "screenshot-20261117-log": {
+      "src": "content/img/citadel/screenshot-20261117-log.png",
+      "w": 1422,
+      "h": 1182,
+      "title": "Event Logging",
+      "caption": "Each time a service is run it generates a log file, application errors are also logged for review. ",
+      "alt": "",
+      "hotspots": []
+    },
+    "screenshot-20261117-devices": {
+      "src": "content/img/citadel/screenshot-20261117-devices.png",
+      "w": 1422,
+      "h": 696,
+      "title": "Device management",
+      "caption": "Owner devices which have full access and can enrol new devices.",
+      "alt": "",
+      "hotspots": []
+    },
+    "screenshot-20261117-vinyl": {
+      "src": "content/img/citadel/screenshot-20261117-vinyl.png",
+      "w": 2304,
+      "h": 545,
+      "title": "Vinyl Radar",
+      "caption": "This has two sections, one for notification of new releases (with price comparisons, links take you directly to the store page). Anything purchased is added to the confirmed orders screen, with a countdown to release day. ",
+      "alt": "",
+      "hotspots": []
+    }
+  }
+}
